@@ -1,0 +1,21 @@
+{
+  "name": "critter-gitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckkorson/critter-gitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckkorson/critter-gitter/issues"
+  },
+  "homepage": "https://github.com/ckkorson/critter-gitter#readme"
+}
