@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet } = require('../../models');
+const { Pet, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // router.post('/', withAuth, async (req, res) => {
@@ -17,18 +17,20 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const allPets = await Pet.findAll()
+    const allPets = await Pet.findAll({
+      include: [User]
+  })
     res.status(200).json(allPets);
   } catch (err) {
     res.status(400).json(err);
   }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newPet = await Pet.create({
       ...req.body,
-      // user_id: req.session.user_id,
+      user_id: req.session.user_id,
     });
 
     res.status(200).json(newPet);
@@ -37,7 +39,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const deletePet = await Pet.destroy({
       where: {
