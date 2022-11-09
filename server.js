@@ -40,11 +40,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Set handlebar routes
-app.get('/', function (req,res) {
-  res.render('home', {
-    stuff: "some stuff..."
-  });
-});
+// app.get('/', function (req,res) {
+//   res.render('home', {
+//     stuff: "some stuff..."
+//   });
+// });
 
 // Set static folder~
 app.use(express.static(path.join(__dirname, 'public')));
