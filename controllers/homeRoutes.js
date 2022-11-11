@@ -4,21 +4,42 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    // const projectData = await BlogPost.findAll({
-    //   include: [
-    //     {
-    //       model: User,
-    //       attributes: ['name'],
-    //     },
-    //   ],
-    // });
-
-    // Serialize data so the template can read it
-    // const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
     res.render('homepage', { 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    console.error(err)
+    res.status(500).json(err);
+  }
+});
+
+router.get('/pets', async (req, res) => {
+  try {
+    const petsRawData = await Pet.findAll()
+    const pets = petsRawData.map((pets) => pets.get({ plain: true }));
+    res.render('petView', { 
+      pets, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    console.error(err)
+    res.status(500).json(err);
+  }
+});
+
+router.get('/pets/:id', async (req, res) => {
+  try {
+    const petRawData = await Pet.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ]
+    })
+    const pet = petRawData.get({ plain: true });
+    res.render('singlePet', { 
+      pet, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
