@@ -48,6 +48,17 @@ router.get('/pets/:id', async (req, res) => {
   }
 });
 
+router.get('/login', async (req, res) => {
+  try {
+    res.render('login', { 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    console.error(err)
+    res.status(500).json(err);
+  }
+});
+
 // router.get('/project/:id', async (req, res) => {
 //   try {
 //     const projectData = await Project.findByPk(req.params.id, {
