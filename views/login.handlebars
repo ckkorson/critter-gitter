@@ -1,0 +1,53 @@
+<!-- Loop over each object in the projects array -->
+
+  <div class="row mb-4 project ">
+    {{!-- <div class="col-md-5"> --}}
+    {{!-- <form>
+    <label for="email">email:</label><br>
+    <input type="text" id="email" email="email" ><br>
+    <label for="password">password:</label><br>
+    <input type="text" id="password"><br><br>
+    <input type="submit" value="Submit">
+    </form>  --}}
+
+<form method="POST" action="api/users/login">
+            <table>
+                <tr>
+                    <td><input name="email" type="text" placeholder="email" 
+required autocomplete="email"/></td>
+                </tr>
+
+                <tr>
+                    <td><input name="password" type="password" placeholder="Password" 
+required autocomplete="current-password"/></td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Ok"/></td>
+                </tr>
+            </table>
+        </form>
+      {{!-- <h2>
+        {{pet.name}}
+      </h2>
+      <p>{{pet.species}}</p> --}}
+
+      {{!-- <p>
+        <span for="img" aria-label="money">💲</span>
+        <!-- Pass needed_funding value to the helper function -->
+        <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
+        needed!
+      </p>
+      <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+    </div>
+    <div class="col-md-7">
+      <p>
+        {{project.description}}
+      </p>
+    </div> --}}
+    
+  </div>
+
+
+
+</div>
