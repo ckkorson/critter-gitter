@@ -7,6 +7,7 @@ const petData = [
     "breed": "Beagle",
     "gender": "Male",
     "description": "He is super sweet!",
+    "location": "Knoxville",
     "user_id": 1
   },
   {
@@ -15,6 +16,7 @@ const petData = [
     "breed": "Coonhound/Shepard",
     "gender": "Male",
     "description": "He loves to snuggle!",
+    "location": "Memphis",
     "user_id": 2
   },
   {
@@ -23,6 +25,7 @@ const petData = [
     "breed": "Arabian",
     "gender": "Female",
     "description": "She is very fast!",
+    "location": "Nashville",
     "user_id": 3
   }
 ];

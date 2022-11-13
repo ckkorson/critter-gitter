@@ -1,29 +1,32 @@
-<!-- Loop over each object in the projects array -->
-{{#each pets as |pet| }}
-  <div class="row mb-4 project ">
-    {{!-- <div class="col-md-5"> --}}
+<body>
+  <h1>Available Critter List</h1>
+  <ul class="pet-list-container"></ul>
+    {{#each pets}}
+    <li class="critters">
+      <h2>{{pet.name}}</h2>
+      <p>Species: {{species}}</p>
+      <p>Breed: {{breed}}</p>
+      <p>Gender: {{gender}}</p>
+      <p>Lil About Me: {{description}}</p>
+      <p>Whereabouts: {{location}}</p>
+      <p>User: {{user_id}}</p>
+    </li>
+    {{/each}} 
+</body>
+
+<div class=>
+  <div class="row mb-4">
+    <ul 
       <h2>
-        <p>{{pet.user.name}}</p>
+        {{!-- <p>{{pet.user.name}}</p> --}}
       </h2>
       <!--why is this not woking -->
-
-      {{!-- <p>
-        <span for="img" aria-label="money">💲</span>
-        <!-- Pass needed_funding value to the helper function -->
-        <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-        needed!
-      </p>
-      <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-    </div>
-    <div class="col-md-7">
-      <p>
-        {{project.description}}
-      </p>
-    </div> --}}
-    
   </div>
-  {{/each}} 
-
-
+{{!-- {{#each pets as |pet| }} --}}
+  {{!-- {{/each}}  --}}
 </div>
+
+
+
+
 
