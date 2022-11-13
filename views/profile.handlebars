@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Add New Pet</h3>
+
+    <form class="form new-pet-form">
+      <div class="form-group">
+        <label for="pet-name">Pet name:</label>
+        <input class="form-input" type="text" id="pet-name" name="pet-name" />
+      </div>
+      <div class="form-group">
+        <label for="species">Species:</label>
+        <input class="form-input" type="text" id="species" name="species" />
+      </div>
+      <div class="form-group">
+        <label for="breed">Breed:</label>
+        <input class="form-input" type="text" id="breed" name="breed" />
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input class="form-input" type="text" id="gender" name="gender" />
+      </div>
+      <div class="form-group">
+        <label for="pet-desc">Description:</label>
+        <textarea class="form-input" id="pet-desc" name="pet-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if pets.length}}
+  <div class="col-md-6 pet-list">
+    <h3>Your Pets</h3>
+
+    {{#each pets as |pet|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/pets/{{pet.id}}">{{pet.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{pet.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
