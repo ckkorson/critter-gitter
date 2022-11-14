@@ -110,7 +110,6 @@ li a:hover {
   margin: 20px;
   padding-left: 5px;
   padding-top: 5px;
-
   box-sizing: border-box;
   background-color: #ff7a59;
   border-radius: 10px;
@@ -138,3 +137,19 @@ li a:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.critter-card {
+  /* background-color: #fff; */
+  margin: 20px;
+  padding-left: 5px;
+  padding-top: 5px;
+  box-sizing: border-box;
+  background-color: #ff7a59;
+  border-radius: 10px;
+  display: inline-block;
+  height: 300px; 
+  line-height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;  
+  box-sizing: border-box;
+} 
