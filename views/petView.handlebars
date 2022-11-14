@@ -2,9 +2,9 @@
   <h1>Available Critter List</h1>
     <div>
       <ul class="pet-list-container"></ul>
-        {{#each pets}}
+        {{#each pets as |pet|}}
         <li class="critter-cards">
-          <h2>{{name}}</h2>
+          <h2><a href="/pets/{{pet.id}}">{{pet.name}}</a></h2>
           <p><strong>Species:</strong> {{species}}</p>
         </li>
         {{/each}} 
