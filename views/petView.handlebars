@@ -1,30 +1,21 @@
 <body>
   <h1>Available Critter List</h1>
-  <ul class="pet-list-container"></ul>
-    {{#each pets}}
-    <li class="critters">
-      <h2>{{pet.name}}</h2>
-      <p>Species: {{species}}</p>
-      <p>Breed: {{breed}}</p>
-      <p>Gender: {{gender}}</p>
-      <p>Lil About Me: {{description}}</p>
-      <p>Whereabouts: {{location}}</p>
-      <p>User: {{user_id}}</p>
-    </li>
-    {{/each}} 
+    <div>
+      <ul class="pet-list-container"></ul>
+        {{#each pets}}
+        <li class="critter-card">
+          <h2>{{name}}</h2>
+          <p><strong>Species:</strong> {{species}}</p>
+          <p><strong>Breed:</strong> {{breed}}</p>
+          <p><strong>Gender:</strong> {{gender}}</p>
+          <p><strong>Lil 'bout me:</strong> {{description}}</p>
+          <p><strong>Whereabouts:</strong> {{location}}</p>
+          <p><strong>User:</strong> {{user_id}}</p>
+        </li>
+        {{/each}} 
+    </div>
 </body>
 
-<div class=>
-  <div class="row mb-4">
-    <ul 
-      <h2>
-        {{!-- <p>{{pet.user.name}}</p> --}}
-      </h2>
-      <!--why is this not woking -->
-  </div>
-{{!-- {{#each pets as |pet| }} --}}
-  {{!-- {{/each}}  --}}
-</div>
 
 
 

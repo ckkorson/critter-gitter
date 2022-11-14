@@ -27,6 +27,12 @@ h1, h2, h3 {
   font-weight: 900;
 }
 
+h1 {
+  margin: 30px 0;
+  text-align: center;
+  /* color: ; */
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -91,5 +97,44 @@ li a:hover {
 .nav-wrap {
   /* height: 10px; */
   margin-left: auto;
+}
+
+.pet-list-container {
+  /* width: 70%;
+  margin: 0 auto; */
+  padding: 2px 16px;
+}
+
+.critter-card {
+  /* background-color: #fff; */
+  margin: 20px;
+  padding-left: 5px;
+  padding-top: 5px;
+
+  box-sizing: border-box;
+  background-color: #ff7a59;
+  border-radius: 10px;
+  display: inline-block;
+  height: 300px; 
+  line-height: 200px;
+  text-align: left;
+  vertical-align: middle;
+  width: 300px;  
+  box-sizing: border-box;
+} 
+
+.critter-card * {
+  color: #505961;
+}
+
+.critter-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.critter-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
