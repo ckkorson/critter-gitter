@@ -39,6 +39,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// // images
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
+// app.use(express.static("images"));
+
+
+// // Route to display static src images
+// app.get("/static", (req, res) => {
+//   res.render("static");
+// });
+
+// // Route to display dynamic src images
+// app.get("/dynamic", (req, res) => {
+//   imageList = [];
+//   imageList.push({ src: "icons/flask.png", name: "flask" });
+//   imageList.push({ src: "icons/javascript.png", name: "javascript" });
+//   imageList.push({ src: "icons/react.png", name: "react" });
+//   res.render("dynamic", { imageList: imageList });
+// });
+
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {

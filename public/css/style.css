@@ -83,20 +83,27 @@ li a:hover {
   font-size: 100%;
 }
 
-/* .no-button:hover {
-  color: #D5D859;
-  text-decoration: wavy;
-} */
-
-/* .dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
-} */
-
 .nav-wrap {
   /* height: 10px; */
   margin-left: auto;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/Raccoon-Wallpaper-HD-78014.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* color: white; */
 }
 
 .pet-list-container {
