@@ -1,5 +1,6 @@
 const logout = async () => {
-    const response = await fetch('/api/users/logout', {
+    try {
+      const response = await fetch('/api/users/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
     });
@@ -8,6 +9,8 @@ const logout = async () => {
       document.location.replace('/');
     } else {
       alert(response.statusText);
+    }}catch(error) {
+      console.log(error)
     }
   };
   
